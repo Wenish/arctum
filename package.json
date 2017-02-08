@@ -1,0 +1,34 @@
+{
+  "name": "yo-ko-test",
+  "version": "0.0.0",
+  "devDependencies": {
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-less": "^3.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-requirejs-bundler": "^0.1.1",
+    "gulp-uglify": "^2.0.0",
+
+    "jasmine-core": "^2.5.2",
+    "karma": "^0.12.37",
+    "karma-brackets": "^0.2.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-requirejs": "^1.1.0",
+    "karma-requireglobal-preprocessor": "^0.0.0",
+
+    "deeply": "~0.1.0",
+    "chalk": "~0.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "crossroads": "^0.12.2",
+    "hasher": "^1.2.0",
+    "knockout": "^3.4.1",
+    "requirejs": "^2.3.2",
+    "requirejs-text": "^2.0.12"
+  }
+}
