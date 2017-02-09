@@ -20,15 +20,15 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     self.languageTextsGerman = {
       home: 'Home',
       ranking: 'Rangliste',
-      german: 'Deutsch',
-      english: 'Englisch'
+      german: 'DE',
+      english: 'EN'
     };
 
     self.languageTextsEnglish = {
       home: 'Home',
       ranking: 'Ranking',
-      german: 'German',
-      english: 'English'
+      german: 'DE',
+      english: 'EN'
     };
 
     self.activeLanguageTexts = ko.computed(function(){
