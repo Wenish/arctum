@@ -15,6 +15,14 @@
                 <li data-bind="css: { active: route().page === 'page-ranking' }">
                     <a href="#ranking">Ranking</a>
                 </li>
+
+                <li data-bind="css: { active: activeLanguage() === 'german' }">
+                    <a href="#" data-bind="click: changeLanguageToGerman">German</a>
+                </li>
+
+                <li data-bind="css: { active: activeLanguage() === 'english' }">
+                    <a href="#" data-bind="click: changeLanguageToEnglish">English</a>
+                </li>
             </ul>
         </div>
     </div>
