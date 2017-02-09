@@ -7,7 +7,7 @@ define(["knockout", "text!./page-home.html"], function(ko, PageHomeTemplate) {
     self.activeLanguage = params.activeLanguage;
 
     self.languageTextsGerman = {
-      message: 'Das ist eine einfache App, um die ein paar leide knockout Features zu zeigen.',
+      message: 'Das ist eine einfache App, um dir ein paar leide knockout Features zu zeigen.',
       addCard: 'Karte hinzufügen',
     };
 
