@@ -5,6 +5,8 @@ define(['knockout', './router'], function(ko, router) {
   ko.components.register('nav-bar', { require: 'components/nav-bar/nav-bar' });
   ko.components.register('page-home', { require: 'components/page-home/page-home' });
   ko.components.register('page-ranking', { require: 'components/page-ranking/page-ranking' });
+  ko.components.register('card', { require: 'components/card/card' });
+
 
 
 
@@ -12,8 +14,6 @@ define(['knockout', './router'], function(ko, router) {
   ko.components.register('loader', {
     template: { require: 'text!components/loader/loader.html' }
   });
-
-
 
 
 

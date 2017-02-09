@@ -44,3 +44,15 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.jumbotron{
+  background: initial;
+}
+
+.card {
+    margin-bottom: 10px;
+    height: 100px;
+    background: #f2f2f2;
+    border-radius: 2px;
+    padding: 5px;
+}
