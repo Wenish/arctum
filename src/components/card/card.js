@@ -24,7 +24,7 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
       return self.languageTextsGerman;
     });
 
-    var rndNumber = Math.floor(Math.random() * (2000 - 200 + 1)) + 200;
+    var rndNumber = Math.floor(Math.random() * (5000 - 200 + 1)) + 200;
 
     setTimeout(function(){
       self.cardLoading(false);
