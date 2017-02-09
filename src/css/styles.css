@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: #f2f2f2;
+    height: 100%;
+    overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-inverse {
+    background-color: #333;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand>img {
+    width: 50px;
+}
+
+.navbar-fixed-top {
+    border: 1px;
+}
+
+.page {
+    background: #fff;
+    margin-top: 50px;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}

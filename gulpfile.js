@@ -16,9 +16,12 @@ var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require
         },
         include: [
             'requireLib',
+            'components/app/app',
             'components/nav-bar/nav-bar',
             'components/page-home/page-home',
-            'text!components/page-about/page-about.html'
+            'components/page-ranking/page-ranking',
+            'text!components/loader/loader.html'
+            //'text!components/page-about/page-about.html'
         ],
         insertRequire: ['app/startup'],
         bundles: {
@@ -33,21 +36,21 @@ var requireJsRuntimeConfig = vm.runInNewContext(fs.readFileSync('src/app/require
 gulp.task('js', function () {
     return rjs(requireJsOptimizerConfig)
         .pipe(uglify({ preserveComments: 'some' }))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/src/'));
 });
 
-    // Concatenates CSS files, rewrites relative paths to Bootstrap fonts, copies Bootstrap fonts
+    // Concatenates CSS files
 gulp.task('css', function () {
-        var appCss = gulp.src('src/css/*.css'),
-        combinedCss = es.concat(appCss).pipe(concat('css.css'))
+        var appCss = gulp.src('src/css/*.css');
+        var combinedCss = es.concat(appCss).pipe(concat('css.css'))
     return es.concat(combinedCss)
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/src/'));
 });
 
 gulp.task('fonts', function () {
         var fonts = gulp.src('src/fonts/**/*')
     return es.concat(fonts)
-        .pipe(gulp.dest('./fonts/'));
+        .pipe(gulp.dest('./dist/fonts/'));
 });
 
 
@@ -59,7 +62,7 @@ gulp.task('html', function() {
             'css': 'css.css',
             'js': 'scripts.js'
         }))
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/src/'));
 });
 
 // Removes all files from ./dist/
