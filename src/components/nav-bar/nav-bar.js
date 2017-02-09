@@ -8,7 +8,7 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     self.params = params;
     self.route = params.route;
     self.activeLanguage = params.activeLanguage;
-    
+
     self.changeLanguageToGerman = function(){
       self.activeLanguage('german');
     };
@@ -16,6 +16,29 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     self.changeLanguageToEnglish = function(){
       self.activeLanguage('english');
     };
+
+    self.languageTextsGerman = {
+      home: 'Home',
+      ranking: 'Rangliste',
+      german: 'Deutsch',
+      english: 'Englisch'
+    };
+
+    self.languageTextsEnglish = {
+      home: 'Home',
+      ranking: 'Ranking',
+      german: 'German',
+      english: 'English'
+    };
+
+    self.activeLanguageTexts = ko.computed(function(){
+      if(self.activeLanguage() == 'german'){
+        return self.languageTextsGerman;
+      } else if(self.activeLanguage() == 'english'){
+        return self.languageTextsEnglish;
+      };
+      return self.languageTextsGerman;
+    });
   }
 
   return { viewModel: NavBarViewModel, template: template };

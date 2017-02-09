@@ -9,19 +9,20 @@
 
             <ul class="nav navbar-nav">
                 <li data-bind="css: { active: route().page === 'page-home' }">
-                    <a href="#">Home</a>
+                    <a href="#" data-bind="text: activeLanguageTexts().home">Home</a>
                 </li>
 
                 <li data-bind="css: { active: route().page === 'page-ranking' }">
-                    <a href="#ranking">Ranking</a>
+                    <a href="#ranking" data-bind="text: activeLanguageTexts().ranking">Ranking</a>
                 </li>
-
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
                 <li data-bind="css: { active: activeLanguage() === 'german' }">
-                    <a href="#" data-bind="click: changeLanguageToGerman">German</a>
+                    <a href="#" data-bind="click: changeLanguageToGerman, text: activeLanguageTexts().german">German</a>
                 </li>
 
                 <li data-bind="css: { active: activeLanguage() === 'english' }">
-                    <a href="#" data-bind="click: changeLanguageToEnglish">English</a>
+                    <a href="#" data-bind="click: changeLanguageToEnglish, text: activeLanguageTexts().english">English</a>
                 </li>
             </ul>
         </div>

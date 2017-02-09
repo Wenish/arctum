@@ -5,9 +5,30 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
 
     self.cardLoading = ko.observable(true);
 
+    self.activeLanguage = params.activeLanguage;
+
+    self.languageTextsGerman = {
+      loaded: 'Geladen...'
+    };
+
+    self.languageTextsEnglish = {
+      loaded: 'Loaded...'
+    };
+
+    self.activeLanguageTexts = ko.computed(function(){
+      if(self.activeLanguage() == 'german'){
+        return self.languageTextsGerman;
+      } else if(self.activeLanguage() == 'english'){
+        return self.languageTextsEnglish;
+      };
+      return self.languageTextsGerman;
+    });
+
+    var rndNumber = Math.floor(Math.random() * (2000 - 200 + 1)) + 200;
+
     setTimeout(function(){
       self.cardLoading(false);
-    },2000);
+    }, rndNumber);
   }
 
   // This runs when the component is torn down. Put here any logic necessary to clean up,
