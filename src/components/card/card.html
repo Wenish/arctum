@@ -2,6 +2,11 @@
     <div class="card">
         <!-- ko if: !cardLoading() -->
         <span data-bind="text: activeLanguageTexts().loaded">Loaded!</span>
+        <input class="card-input" type="text" maxlength="15" data-bind="textInput: text"/>
+        <!-- ko if: text().length > 14 -->
+        <span class="card-input-maxlength" data-bind="text: activeLanguageTexts().maxLength">Max Length is 15!</span><br/>
+        <!-- /ko -->
+        <span data-bind="text: text"></span>
         <!-- /ko -->
 
         <!-- ko if: cardLoading() -->

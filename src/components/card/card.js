@@ -5,14 +5,18 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
 
     self.cardLoading = ko.observable(true);
 
+    self.text = ko.observable('');
+
     self.activeLanguage = params.activeLanguage;
 
     self.languageTextsGerman = {
-      loaded: 'Geladen...'
+      loaded: 'Geladen...',
+      maxLength: 'Maximallänge ist 15!'
     };
 
     self.languageTextsEnglish = {
-      loaded: 'Loaded...'
+      loaded: 'Loaded...',
+      maxLength: 'Max length is 15!!'
     };
 
     self.activeLanguageTexts = ko.computed(function(){
