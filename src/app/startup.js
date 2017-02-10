@@ -7,15 +7,10 @@ define(['knockout', './router'], function(ko, router) {
   ko.components.register('page-ranking', { require: 'components/page-ranking/page-ranking' });
   ko.components.register('card', { require: 'components/card/card' });
 
-
-
-
   // ... or for template-only components, you can just point to a .html file directly:
   ko.components.register('loader', {
     template: { require: 'text!components/loader/loader.html' }
   });
-
-
 
   // [Scaffolded component registrations will be inserted here. To retain this feature, don't remove this comment.]
   // Start the application
