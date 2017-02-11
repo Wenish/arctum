@@ -3,20 +3,24 @@ define(['knockout', 'text!./page-ranking.html'], function(ko, templateMarkup) {
   function PageRankingViewModel(params) {
     var self = this;
 
-    self.params = params;
     self.activeLanguage = params.activeLanguage;
+    self.rankings = ko.observableArray([]);
     self.pageLoading = ko.observable(true);
 
     self.languageTextsGerman = {
       firstName: 'Vorname',
       lastName: 'Nachname',
-      username: 'Benutzername'
+      username: 'Benutzername',
+      ranking: 'Rangliste',
+      refresh: 'Aktualisieren'
     };
 
     self.languageTextsEnglish = {
       firstName: 'First Name',
       lastName: 'Last Name',
-      username: 'Username'
+      username: 'Username',
+      ranking: 'Ranking',
+      refresh: 'Refresh'
     };
 
     self.activeLanguageTexts = ko.computed(function(){
@@ -28,9 +32,32 @@ define(['knockout', 'text!./page-ranking.html'], function(ko, templateMarkup) {
       return self.languageTextsGerman;
     });
 
-    setTimeout(function(){
-      self.pageLoading(false);
-    },2000);
+    var rankingData = [
+      {
+        firstName: 'Larry',
+        lastName: 'the Bird',
+        username: '@twitter'
+      },
+      {
+        firstName: 'Bert',
+        lastName: 'Royal',
+        username: '@robert'
+      },
+      {
+        firstName: 'Timmy',
+        lastName: 'le greyer',
+        username: '@wein'
+      }
+    ]
+
+    self.getRankings = function(){
+      self.pageLoading(true);
+      setTimeout(function(){
+        self.rankings(rankingData);
+        self.pageLoading(false);
+      },1000);
+    };
+    self.getRankings();
   }
 
   // This runs when the component is torn down. Put here any logic necessary to clean up,

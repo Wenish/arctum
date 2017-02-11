@@ -17,6 +17,19 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown open" data-bind="css: { open: dropdownProfileOpen()}">
+                    <a href="#" class="dropdown-toggle icon-navbar-profile-person ion-android-person" data-bind="click: toggleDropdownProfile"></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#profile" data-bind="click: closeDropdownProfile">Profile</a></li>
+                        <li><a href="#profile/likes" data-bind="click: closeDropdownProfile">Likes</a></li>
+                        <li><a href="#profile/following" data-bind="click: closeDropdownProfile">Following</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#ranking" data-bind="click: closeDropdownProfile">Stats</a></li>
+                    </ul>
+                </li>
+                <!-- ko if: dropdownProfileOpen() -->
+                <div class="dropdown-background" data-bind="click: closeDropdownProfile"></div>
+                <!-- /ko -->
                 <li data-bind="css: { active: activeLanguage() === 'german' }">
                     <a href="#" data-bind="click: changeLanguageToGerman, text: activeLanguageTexts().german">German</a>
                 </li>

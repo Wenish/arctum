@@ -12,6 +12,12 @@ define(['knockout', './router'], function(ko, router) {
     template: { require: 'text!components/loader/loader.html' }
   });
 
+  ko.components.register('row-ranking', { require: 'components/row-ranking/row-ranking' });
+
+
+  ko.components.register('page-profile', { require: 'components/page-profile/page-profile' });
+
+
   // [Scaffolded component registrations will be inserted here. To retain this feature, don't remove this comment.]
   // Start the application
   ko.applyBindings({ route: router.currentRoute });

@@ -37,6 +37,25 @@ body {
     border: 1px;
 }
 
+.icon-navbar-profile-person {
+    font-size: 20px;
+}
+
+.dropdown-background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1031;
+    background: black;
+    opacity: 0.1;
+}
+
+.dropdown {
+    z-index: 1032;
+}
+
 .page {
     background: #fff;
     margin-top: 50px;
@@ -45,23 +64,70 @@ body {
     overflow-x: hidden;
 }
 
-.jumbotron{
-  background: initial;
+.jumbotron {
+    background: initial;
 }
 
 .card {
-  height: 100px;
-  margin-bottom: 10px;
-  background: #f2f2f2;
-  border-radius: 2px;
-  padding: 5px;
+    height: 100px;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    border-radius: 2px;
+    padding: 5px;
 }
 
-.card-input{
-  width: 100%;
+.card-input {
+    width: 100%;
 }
 
-.card-input-maxlength{
-  color: red;
-  font-size: 11px;
+.card-input-maxlength {
+    color: red;
+    font-size: 11px;
+}
+
+.icon-ranking-refresh {
+    margin-left: 5px;
+}
+
+.icon-ranking-refresh:hover {
+    opacity: 0.8;
+}
+
+.container-ranking-loader {
+    height: 100px;
+}
+
+.nav-profile {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    border-bottom: 1px solid #f2f2f2;
+    padding-top: 15px;
+    float: left;
+    width: 100%;
+}
+
+.nav-profile>li {
+    float: left;
+    margin: 0 12px -1px;
+}
+
+.nav-profile>li>a {
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid transparent;
+    display: block;
+    font-size: 18px;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.nav-profile>li>a:hover {
+    border-color: #333;
+    outline: 0;
+}
+.nav-profile>li.active>a {
+    border-color: #337ab7;
+    color: #337ab7;
+    cursor: default;
 }

@@ -8,7 +8,6 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     self.params = params;
     self.route = params.route;
     self.activeLanguage = params.activeLanguage;
-
     self.changeLanguageToGerman = function(){
       self.activeLanguage('german');
     };
@@ -39,6 +38,19 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
       };
       return self.languageTextsGerman;
     });
+
+    self.dropdownProfileOpen = ko.observable(false);
+
+    self.openDropdownProfile = function(){
+      self.dropdownProfileOpen(true);
+    }
+    self.closeDropdownProfile = function(){
+      self.dropdownProfileOpen(false);
+      return true;
+    }
+    self.toggleDropdownProfile = function(){
+      self.dropdownProfileOpen(!self.dropdownProfileOpen());
+    }
   }
 
   return { viewModel: NavBarViewModel, template: template };

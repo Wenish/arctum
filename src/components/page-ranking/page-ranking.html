@@ -1,5 +1,6 @@
-<!-- ko if: !pageLoading() -->
-<h2>Ranking</h2>
+<h2 data-bind="text: activeLanguageTexts().ranking">Ranking</h2>
+
+
 
 <table class="table table-hover">
     <thead>
@@ -10,29 +11,20 @@
             <th data-bind="text: activeLanguageTexts().username">Username</th>
         </tr>
     </thead>
+    <!-- ko if: !pageLoading() -->
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
+        <!-- ko foreach: rankings -->
+        <tr data-bind="component: { name: 'row-ranking', params: { data: $data, index: $index} }"></tr>
+        <!-- /ko -->
     </tbody>
+    <!-- /ko -->
 </table>
+<!-- ko if: !pageLoading() -->
+<div class="btn btn-primary" data-bind="click: getRankings, text: activeLanguageTexts().refresh">Refresh</div>
 <!-- /ko -->
 
 <!-- ko if: pageLoading() -->
-<loader></loader>
+<div class="container-ranking-loader">
+  <loader></loader>
+</div>
 <!-- /ko -->
