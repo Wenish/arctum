@@ -1,0 +1,10 @@
+<div class="jumbotron">
+    <h1>Arctum</h1>
+    <p data-bind="text: activeLanguageTexts().message">This is a simple app to show you some great knockout features.</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button" data-bind="click: addCard, text: activeLanguageTexts().addCard">Add Card</a></p>
+</div>
+<div class="row">
+    <!-- ko foreach: cards -->
+      <card params="currentLanguage: $parent.currentLanguage, data: $data, parent: $parent"></card>
+    <!-- /ko -->
+</div>

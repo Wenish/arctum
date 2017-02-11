@@ -2,21 +2,29 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
 
   function CardViewModel(params) {
     var self = this;
+    self.data = params.data;
+    self.parent = params.parent;
 
     self.currentLanguage = params.currentLanguage;
 
     self.cardLoading = ko.observable(true);
 
-    self.text = ko.observable('');
+    self.deleteCard = function(){
+      self.parent.deleteCard(self.data);
+    };
+
+    self.text = ko.observable(self.data);
 
     self.languageTextsGerman = {
       loaded: 'Geladen...',
-      maxLength: 'Maximallänge ist 15!'
+      maxLength: 'Maximallänge ist 15!',
+      delete: 'Löschen'
     };
 
     self.languageTextsEnglish = {
       loaded: 'Loaded...',
-      maxLength: 'Max length is 15!!'
+      maxLength: 'Max length is 15!',
+      delete: 'Delete'
     };
 
     self.activeLanguageTexts = ko.computed(function(){

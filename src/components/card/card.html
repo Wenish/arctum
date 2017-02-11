@@ -2,6 +2,7 @@
     <div class="card">
         <!-- ko if: !cardLoading() -->
         <span data-bind="text: activeLanguageTexts().loaded">Loaded!</span>
+        <div class="btn btn-danger btn-xs btn-card-delete" data-bind="click: deleteCard, text: activeLanguageTexts().delete">Delete</div>
         <input class="card-input" type="text" maxlength="15" data-bind="textInput: text"/>
         <!-- ko if: text().length > 14 -->
         <span class="card-input-maxlength" data-bind="text: activeLanguageTexts().maxLength">Max Length is 15!</span><br/>

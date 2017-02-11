@@ -149,3 +149,7 @@ body {
     color: #337ab7;
     cursor: default;
 }
+
+.btn-card-delete{
+  float: right;
+}

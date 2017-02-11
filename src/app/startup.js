@@ -18,6 +18,10 @@ define(['knockout', './router', './language'], function(ko, router, currentLangu
   ko.components.register('page-profile', { require: 'components/page-profile/page-profile' });
 
 
+  ko.components.register('list-of-cards', { require: 'components/list-of-cards/list-of-cards' });
+
+
+
   // [Scaffolded component registrations will be inserted here. To retain this feature, don't remove this comment.]
   // Start the application
   ko.applyBindings({ route: router.currentRoute, currentLanguage: currentLanguage });
