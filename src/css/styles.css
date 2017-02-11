@@ -1,11 +1,24 @@
 html {
     height: 100%;
+    font-family: TheSaB5, 'Trebuchet MS', Arial, Helvetica, sans-serif !important;
 }
 
 body {
     background: #f2f2f2;
     height: 100%;
     overflow: hidden;
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+    /* Chrome/Safari/Opera */
+    -webkit-user-select: none;
+    /* Konqueror */
+    -khtml-user-select: none;
+    /* Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
 
 *::-webkit-scrollbar {
@@ -126,6 +139,7 @@ body {
     border-color: #333;
     outline: 0;
 }
+
 .nav-profile>li.active>a {
     border-color: #337ab7;
     color: #337ab7;
