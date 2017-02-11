@@ -4,10 +4,8 @@ define(['knockout', 'text!./page-profile.html'], function(ko, templateMarkup) {
     var self = this;
 
     self.path = params.route().path || 'profile';
-    x = params;
 
     this.message = ko.observable('Hello from the page-profile component!');
-    console.log(self.path)
   }
 
   // This runs when the component is torn down. Put here any logic necessary to clean up,
