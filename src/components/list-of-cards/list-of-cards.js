@@ -7,6 +7,7 @@ define(['knockout', 'text!./list-of-cards.html'], function(ko, templateMarkup) {
     self.cards = ko.observableArray([1,2,3,4]);
 
     self.deleteCard = function(obj){
+      var obj = obj || this;
       self.cards.remove(obj);
     };
 
