@@ -20,11 +20,11 @@
                 <li class="dropdown open" data-bind="css: { open: dropdownProfileOpen()}">
                     <a href="#" class="dropdown-toggle icon-navbar-profile-person ion-android-person" data-bind="click: toggleDropdownProfile"></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#profile" data-bind="click: closeDropdownProfile">Profile</a></li>
-                        <li><a href="#profile/likes" data-bind="click: closeDropdownProfile">Likes</a></li>
-                        <li><a href="#profile/following" data-bind="click: closeDropdownProfile">Following</a></li>
+                        <li><a href="#profile" data-bind="click: closeDropdownProfile, text: activeLanguageTexts().profile">Profile</a></li>
+                        <li><a href="#profile/likes" data-bind="click: closeDropdownProfile, text: activeLanguageTexts().likes">Likes</a></li>
+                        <li><a href="#profile/following" data-bind="click: closeDropdownProfile, text: activeLanguageTexts().following">Following</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#ranking" data-bind="click: closeDropdownProfile">Stats</a></li>
+                        <li><a href="#ranking" data-bind="click: closeDropdownProfile, text: activeLanguageTexts().stats">Stats</a></li>
                     </ul>
                 </li>
                 <!-- ko if: dropdownProfileOpen() -->

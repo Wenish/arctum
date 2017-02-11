@@ -1,11 +1,11 @@
 <ul class="nav-profile">
     <li data-bind="css: { active: path == 'profile'}">
-      <a href="#profile">Profile</a>
+      <a href="#profile" data-bind="text: activeLanguageTexts().profile">Profile</a>
     </li>
     <li data-bind="css: { active: path == 'likes'}">
-      <a href="#profile/likes">Likes</a>
+      <a href="#profile/likes" data-bind="text: activeLanguageTexts().likes">Likes</a>
     </li>
     <li data-bind="css: { active: path == 'following'}">
-      <a href="#profile/following">Following</a>
+      <a href="#profile/following" data-bind="text: activeLanguageTexts().following">Following</a>
     </li>
 </ul>
