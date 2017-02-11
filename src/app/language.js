@@ -1,4 +1,4 @@
-define(["lodash"], function(_) {
+define(['knockout', 'lodash'], function(ko, _) {
 
     // This module gets the browser language
     // These window.navigator contain language information
@@ -25,6 +25,6 @@ define(["lodash"], function(_) {
         })
         .value();
 
-    var locale = detectedLocale || 'en'; //If no locale is detected, fallback to 'en'
+    var locale = ko.observable(detectedLocale || 'en'); //If no locale is detected, fallback to 'en'
     return locale;
 });

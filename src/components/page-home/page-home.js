@@ -4,7 +4,7 @@ define(["knockout", "text!./page-home.html"], function(ko, PageHomeTemplate) {
     var self = this;
     self.cards = ko.observableArray([1,2,3,4]);
 
-    self.activeLanguage = params.activeLanguage;
+    self.locale = params.locale;
 
     self.languageTextsGerman = {
       message: 'Das ist eine einfache App, um dir ein paar leide knockout Features zu zeigen.',
@@ -17,9 +17,9 @@ define(["knockout", "text!./page-home.html"], function(ko, PageHomeTemplate) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.activeLanguage() == 'de'){
+      if(self.locale() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.activeLanguage() == 'en'){
+      } else if(self.locale() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;

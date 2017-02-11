@@ -3,7 +3,7 @@ define(['knockout', 'text!./page-profile.html'], function(ko, templateMarkup) {
   function PageProfile(params) {
     var self = this;
     self.path = params.route().path || 'profile';
-    self.activeLanguage = params.activeLanguage;
+    self.locale = params.locale;
 
     self.languageTextsGerman = {
       profile: 'Profil',
@@ -18,9 +18,9 @@ define(['knockout', 'text!./page-profile.html'], function(ko, templateMarkup) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.activeLanguage() == 'de'){
+      if(self.locale() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.activeLanguage() == 'en'){
+      } else if(self.locale() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;

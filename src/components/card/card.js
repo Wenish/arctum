@@ -7,7 +7,7 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
 
     self.text = ko.observable('');
 
-    self.activeLanguage = params.activeLanguage;
+    self.locale = params.locale;
 
     self.languageTextsGerman = {
       loaded: 'Geladen...',
