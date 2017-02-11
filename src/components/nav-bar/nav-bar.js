@@ -6,13 +6,13 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     // You could remove this viewmodel entirely, and define 'nav-bar' as a template-only component.
     // But in most apps, you'll want some viewmodel logic to determine what navigation options appear.
     self.route = params.route;
-    self.locale = params.locale;
+    self.currentLanguage = params.currentLanguage;
     self.changeLanguageToGerman = function(){
-      self.locale('de');
+      self.currentLanguage('de');
     };
 
     self.changeLanguageToEnglish = function(){
-      self.locale('en');
+      self.currentLanguage('en');
     };
 
     self.languageTextsGerman = {
@@ -38,9 +38,9 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.locale() == 'de'){
+      if(self.currentLanguage() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.locale() == 'en'){
+      } else if(self.currentLanguage() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;

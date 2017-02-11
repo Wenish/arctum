@@ -25,6 +25,6 @@ define(['knockout', 'lodash'], function(ko, _) {
         })
         .value();
 
-    var locale = ko.observable(detectedLocale || 'en'); //If no locale is detected, fallback to 'en'
-    return locale;
+    var currentLanguage = ko.observable(detectedLocale || 'en'); //If no locale is detected, fallback to 'en'
+    return currentLanguage;
 });

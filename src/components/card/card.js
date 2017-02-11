@@ -3,11 +3,11 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
   function CardViewModel(params) {
     var self = this;
 
+    self.currentLanguage = params.currentLanguage;
+
     self.cardLoading = ko.observable(true);
 
     self.text = ko.observable('');
-
-    self.locale = params.locale;
 
     self.languageTextsGerman = {
       loaded: 'Geladen...',
@@ -20,9 +20,9 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.locale() == 'de'){
+      if(self.currentLanguage() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.locale() == 'en'){
+      } else if(self.currentLanguage() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;

@@ -3,7 +3,7 @@ define(['knockout', 'text!./page-ranking.html'], function(ko, templateMarkup) {
   function PageRankingViewModel(params) {
     var self = this;
 
-    self.locale = params.locale;
+    self.currentLanguage = params.currentLanguage;
     self.rankings = ko.observableArray([]);
     self.pageLoading = ko.observable(true);
 
@@ -24,9 +24,9 @@ define(['knockout', 'text!./page-ranking.html'], function(ko, templateMarkup) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.locale() == 'de'){
+      if(self.currentLanguage() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.locale() == 'en'){
+      } else if(self.currentLanguage() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;
