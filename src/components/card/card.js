@@ -20,9 +20,9 @@ define(['knockout', 'text!./card.html'], function(ko, templateMarkup) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.activeLanguage() == 'de'){
+      if(self.locale() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.activeLanguage() == 'en'){
+      } else if(self.locale() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;
