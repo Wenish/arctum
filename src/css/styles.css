@@ -54,6 +54,10 @@ body {
     font-size: 20px;
 }
 
+.dropdown-menu {
+    border-top: initial;
+}
+
 .dropdown-background {
     position: fixed;
     height: 100%;
