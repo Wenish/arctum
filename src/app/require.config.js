@@ -6,7 +6,8 @@ var require = {
         "hasher":               "../node_modules/hasher/dist/js/hasher.min",
         "knockout":             "../node_modules/knockout/build/output/knockout-latest",
         "signals":              "../node_modules/signals/dist/signals.min",
-        "text":                 "../node_modules/requirejs-text/text"
+        "text":                 "../node_modules/requirejs-text/text",
+        "lodash":                 "../node_modules/lodash/lodash"
     },
     //The require.config.js in test expects the shim to be defined
     shim: {}

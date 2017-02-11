@@ -30,11 +30,11 @@
                 <!-- ko if: dropdownProfileOpen() -->
                 <div class="dropdown-background" data-bind="click: closeDropdownProfile"></div>
                 <!-- /ko -->
-                <li data-bind="css: { active: activeLanguage() === 'german' }">
+                <li data-bind="css: { active: activeLanguage() === 'de' }">
                     <a href="#" data-bind="click: changeLanguageToGerman, text: activeLanguageTexts().german">German</a>
                 </li>
 
-                <li data-bind="css: { active: activeLanguage() === 'english' }">
+                <li data-bind="css: { active: activeLanguage() === 'en' }">
                     <a href="#" data-bind="click: changeLanguageToEnglish, text: activeLanguageTexts().english">English</a>
                 </li>
             </ul>

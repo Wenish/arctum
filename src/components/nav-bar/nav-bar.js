@@ -8,11 +8,11 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     self.route = params.route;
     self.activeLanguage = params.activeLanguage;
     self.changeLanguageToGerman = function(){
-      self.activeLanguage('german');
+      self.activeLanguage('de');
     };
 
     self.changeLanguageToEnglish = function(){
-      self.activeLanguage('english');
+      self.activeLanguage('en');
     };
 
     self.languageTextsGerman = {
@@ -38,9 +38,9 @@ define(['knockout', 'text!./nav-bar.html'], function(ko, template) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.activeLanguage() == 'german'){
+      if(self.activeLanguage() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.activeLanguage() == 'english'){
+      } else if(self.activeLanguage() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;

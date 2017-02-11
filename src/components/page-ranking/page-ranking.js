@@ -24,9 +24,9 @@ define(['knockout', 'text!./page-ranking.html'], function(ko, templateMarkup) {
     };
 
     self.activeLanguageTexts = ko.computed(function(){
-      if(self.activeLanguage() == 'german'){
+      if(self.activeLanguage() == 'de'){
         return self.languageTextsGerman;
-      } else if(self.activeLanguage() == 'english'){
+      } else if(self.activeLanguage() == 'en'){
         return self.languageTextsEnglish;
       };
       return self.languageTextsGerman;
