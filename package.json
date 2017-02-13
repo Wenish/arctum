@@ -11,7 +11,6 @@
     "gulp-replace": "^0.5.4",
     "gulp-requirejs-bundler": "^0.1.1",
     "gulp-uglify": "^2.0.0",
-
     "jasmine-core": "^2.5.2",
     "karma": "^0.12.37",
     "karma-brackets": "^0.2.1",
@@ -19,7 +18,6 @@
     "karma-jasmine": "^1.0.2",
     "karma-requirejs": "^1.1.0",
     "karma-requireglobal-preprocessor": "^0.0.0",
-
     "deeply": "~0.1.0",
     "chalk": "~0.4.0"
   },
@@ -28,6 +26,7 @@
     "crossroads": "^0.12.2",
     "hasher": "^1.2.0",
     "knockout": "^3.4.1",
+    "lodash": "^4.17.4",
     "requirejs": "^2.3.2",
     "requirejs-text": "^2.0.12"
   }
